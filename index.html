@@ -4,25 +4,55 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
 body {
-  background-color: #001a33;
-  color: white;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif;  
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif;
+  color: #fff;  
 }
 
-#content {
-  padding: 20px; 
-  border-radius: 10px;
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
 }
+
+h2 {
+  font-size: 1.5rem;  
+}
+
+p {
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;  
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  p {
+    font-size: .85rem;
+  } 
+}
+
 </style>
 
 </head>
 
 <body>
 
-<h2>Changelog</h2>  
+<div class="container">
 
-<div id="content"></div>
+<h2>Read Text File</h2>  
+
+<p id="content"></p>
+
+</div>
 
 <script>
 
@@ -32,7 +62,7 @@ fetch('changelog.txt')
     document.getElementById('content').innerText = data;
   })
   .catch(error => console.error(error));
-  
+   
 </script>
 
 </body>
