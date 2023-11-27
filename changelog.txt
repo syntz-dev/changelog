@@ -1,0 +1,1 @@
+[27/11/2023 09:35] - Falha na filtragem de informações irrelevantes durante processo decisório, resultando em escolha de alternativa sub-ótima. Recomendado refazer o processo focando apenas em dados realmente importantes.
