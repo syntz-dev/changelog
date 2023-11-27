@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: #001a33;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+</style>
+</head>
+<body>
+
+<h2>Read Text File</h2>
+
+<div id="content"></div>
+
+<script>
+fetch('file.txt')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('content').innerText = data;
+})
+.catch(error => console.error(error));
+</script>
+
+</body>
+</html>
