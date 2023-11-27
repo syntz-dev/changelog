@@ -1,36 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 body {
-    background-color: #001a33;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
+  background-color: #001a33;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', sans-serif;  
 }
 
 #content {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
+  padding: 20px; 
+  border-radius: 10px;
 }
 </style>
+
 </head>
+
 <body>
 
-<h2>Read Text File</h2>
+<h2>Changelog</h2>  
 
 <div id="content"></div>
 
 <script>
+
 fetch('changelog.txt')
-.then(response => response.text())
-.then(data => {
+  .then(response => response.text())
+  .then(data => {
     document.getElementById('content').innerText = data;
-})
-.catch(error => console.error(error));
+  })
+  .catch(error => console.error(error));
+  
 </script>
 
 </body>
